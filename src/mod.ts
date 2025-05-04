@@ -5,14 +5,15 @@ import { CustomItemService } from "@spt/services/mod/CustomItemService";
 import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { ItemTpl } from "@spt/models/enums/ItemTpl";
 
 import * as config from "../config/config.json";
 
 const secureContainers = {
     "kappa": "5c093ca986f7740a1867ab12",
-    "kappa_cult": "676008db84e242067d0dc4c9",
+    "kappaCult": "676008db84e242067d0dc4c9",
     "gamma": "5857a8bc2459772bad15db29",
-    "gamma_tue":"665ee77ccf2d642e98220bca",
+    "gammaUnheard":"665ee77ccf2d642e98220bca",
     "epsilon": "59db794186f77448bc595262",
     "beta": "5857a8b324597729ab0a0e7d",
     "alpha": "544a11ac4bdc2d470e8b456a",
@@ -32,13 +33,13 @@ class Mod implements IPostDBLoadMod, IPostSptLoadMod
 
 
         const miccCase: NewItemFromCloneDetails = {
-            itemTplToClone: "5d235bb686f77443f4331278",
+            itemTplToClone: ItemTpl.CONTAINER_SICC,
             overrideProperties: {
                 Name: "Medical SICC",
                 ShortName: "M I C C",
                 Description: "SICC case for medical items.",
                 Prefab: {
-                    "path": "assets/content/items/containers/item_container_lopouch/micc.bundle",
+                    "path": "assets/content/items/containers/item_container_lopouch/item_container_lopouch.bundle",
                     "rcid": ""
                 },
                 Grids: [
@@ -153,7 +154,7 @@ class Mod implements IPostDBLoadMod, IPostSptLoadMod
         }
         else 
         {
-            console.log("MICC hasn't loaded.")
+            console.log("ERROR WHILE LOADING MICC")
         }
     }
 }

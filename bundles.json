@@ -1,7 +1,7 @@
 {
     "manifest": [
         {
-            "key": "assets/content/items/containers/item_container_lopouch/micc.bundle",
+            "key": "assets/content/items/containers/item_container_lopouch/item_container_lopouch.bundle",
             "dependencyKeys": []
         }
     ]

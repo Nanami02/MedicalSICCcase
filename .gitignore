@@ -1,0 +1,10 @@
+node_modules/
+types/
+dist/
+.buildignore
+.eslintignore
+.eslintrc.json
+build.mjs
+tsconfig.json
+mod.code-workspace
+package-lock.json
